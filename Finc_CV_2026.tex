@@ -1,0 +1,393 @@
+%% Karolina Finc — Curriculum Vitae
+%% Minimal academic CV — compiled with XeLaTeX or LuaLaTeX
+
+\documentclass[10pt, a4paper]{article}
+
+%% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=2.2cm, top=2.0cm, bottom=2.2cm]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{eurosym}
+
+%% ── Colours & typography ─────────────────────────────────────────────────────
+\definecolor{accent}{gray}{0.35}
+\definecolor{rule}{gray}{0.75}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+%% ── Layout helpers ───────────────────────────────────────────────────────────
+% Section heading
+\newcommand{\cvsection}[1]{%
+  \vspace{1.4em}%
+  {\large\scshape #1}%
+  \vspace{0.25em}%
+  \par\noindent\textcolor{rule}{\rule{\linewidth}{0.4pt}}%
+  \vspace{0.5em}%
+}
+
+% Two-column entry: {date}{content}
+\newcommand{\cventry}[2]{%
+  \begin{tabular*}{\linewidth}{@{}p{2.8cm}@{\hspace{0.5em}}p{\dimexpr\linewidth-3.3cm}@{}}
+    \textcolor{accent}{\small\itshape #1} & #2 \\[0.2em]
+  \end{tabular*}%
+}
+
+% Publication / list entry
+\newenvironment{cvlist}{%
+  \begin{enumerate}[leftmargin=2em, label={[\arabic*]}, itemsep=0.25em, parsep=0pt]%
+}{%
+  \end{enumerate}%
+}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+%% ── Header ───────────────────────────────────────────────────────────────────
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  {\LARGE\bfseries Karolina Finc} &
+  \begin{tabular}[t]{r@{}}
+    \small\textcolor{accent}{Last update: 19.04.2026}
+  \end{tabular}
+\end{tabularx}
+
+\vspace{0.6em}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \begin{tabular}[t]{@{}l@{}}
+    Assistant Professor, PhD \\
+    Institute of Advanced Studies \\
+    Centre for Modern Interdisciplinary Technologies \\
+    Nicolaus Copernicus University in Toru\'n, Poland \\
+    Wile\'nska 4, 87-100 Toru\'n
+  \end{tabular}
+  &
+  \begin{tabular}[t]{@{}r@{}}
+    \href{mailto:finc@umk.pl}{finc@umk.pl} \\
+    \href{https://kfinc.github.io/}{kfinc.github.io} \\
+    \href{https://github.com/kfinc}{github.com/kfinc}
+  \end{tabular}
+\end{tabularx}
+
+%% ── Research Interests ───────────────────────────────────────────────────────
+\cvsection{Research Interests}
+
+In my research, I seek to understand how the organization and dynamics of complex networks shape human experience.
+I study how brain networks reorganize during cognition, learning, and flow states, and how the brain dynamically
+interacts with the body. I am particularly interested in connecting ideas across disciplines and exploring
+unexpected links between seemingly distant fields.
+
+%% ── Experience ───────────────────────────────────────────────────────────────
+\cvsection{Experience}
+
+\cventry{2020 -- present}{\textbf{Assistant Professor}, Institute of Advanced Studies, Centre for Modern Interdisciplinary Technologies, Nicolaus Copernicus University in Toru\'n, Poland.}
+
+\cventry{2026 -- present}{\textbf{Member}, Human Ecology Lab, Institute of Advanced Studies, CMIT, Nicolaus Copernicus University in Toru\'n, Poland.}
+
+\cventry{2020 -- present}{\textbf{Member}, Centre of Excellence Dynamics, Mathematical Analysis \& Artificial Intelligence — group: Neuroinformatics and Artificial Intelligence.}
+
+\cventry{2025}{\textbf{Visiting Researcher}, RITMO Centre for Interdisciplinary Studies in Rhythm, Time and Motion, University of Oslo, Norway. Collaboration on network analysis of musician--audience synchronization and autonomic regulation during live performances.}
+
+\cventry{2021}{\textbf{Postdoctoral Fellow}, Max Planck Institute for Human Development, Max Planck Research Group NeuroCode (advisor: Nicolas Schuck), Berlin, Germany. Contributed a network neuroscience perspective to research on memory and learning.}
+
+\cventry{2019}{\textbf{Visiting Researcher}, Stanford University, Department of Psychology, The Poldrack Lab (advisor: Russell Poldrack), Stanford, USA. Contributing to fMRIPrep and FitLins; representation similarity analysis of the self-regulation ontologies project.}
+
+\cventry{2018}{\textbf{Visiting Researcher}, University of Pennsylvania, Department of Bioengineering, Complex Systems Group (advisor: Danielle Bassett), Philadelphia, USA. Dynamic multilevel network analysis of longitudinal fMRI data.}
+
+\cventry{2017}{\textbf{Data Scientist}, Neurodio spin-off. Analysis of behavioral data from a cognitive training study.}
+
+\cventry{2014 -- present}{\textbf{Co-founder}, Neurodio spin-off company focusing on meaningful design.}
+
+\cventry{2014 -- 2020}{\textbf{Research Assistant}, Neurocognitive Laboratory, CMIT, Nicolaus Copernicus University in Toru\'n, Poland.}
+
+\cventry{2014}{\textbf{Visiting Student Researcher}, Max Planck Institute for Human Development, Center for Lifespan Psychology, Mechanisms and Sequential Progression of Plasticity Group (advisor: Simone K\"uhn), Berlin, Germany.}
+
+\cventry{2014}{\textbf{Intern}, Neurocognitive Laboratory, CMIT, Nicolaus Copernicus University in Toru\'n, Poland.}
+
+%% ── Education ────────────────────────────────────────────────────────────────
+\cvsection{Education}
+
+\cventry{2017 -- 2019}{\textbf{PhD, Natural Sciences in Physical Sciences} (16.10.2019), Faculty of Physics, Astronomy and Informatics, Nicolaus Copernicus University, Toru\'n. Thesis: \textit{Dynamics and plasticity of human brain functional network during working memory task performance} (advisor: W{\l}odzis{\l}aw Duch).}
+
+\cventry{2017 -- 2018}{\textbf{Applied Mathematics}, Faculty of Mathematics and Computer Science, Nicolaus Copernicus University.}
+
+\cventry{2012 -- 2014}{\textbf{MA, Cognitive Science} (03.07.2014), Faculty of Humanities, Institute of Philosophy, Nicolaus Copernicus University. Thesis: \textit{Effect of action video game training on temporal information processing in the range of tens of milliseconds}.}
+
+\cventry{2009 -- 2012}{\textbf{BA, Cognitive Science} (04.07.2012), Faculty of Humanities, Institute of Philosophy, Nicolaus Copernicus University. Thesis: \textit{The role of sleep in neuroplasticity in the learning and memory context}.}
+
+%% ── Publications ─────────────────────────────────────────────────────────────
+\cvsection{Publications}
+
+\begin{cvlist}
+
+\item Finc, K., Adamska-Stolarczyk, I., Bassett, D.\,S. (2026). Flexible Modularity in the Human Brain: How Network Architecture Reconfigures Over Time. \textit{OSF preprints}.
+
+\item Bonna, K., Hulme, O.\,J., Steinkamp, S.\,R., Meder, D., van der Weij, M.\,E.\,C., Duch, W., \& Finc, K. (2026). Brain network reconfiguration during reward prediction error processing. \textit{Network Neuroscience} (accepted).
+
+\item Lewartowski, A.\,B., \& Finc, K. (2026). Exploring the Potential of Polyrhythmic Entrainment for Cognitive Enhancement and Adaptive Brain-Body Dynamics. \textit{Musicae Scientae} (in press).
+
+\item Grassia, M., d'Andrea, V., Finc, K., De Domenico, M., \& Mangioni, G. (2026). Machine-enhanced reconstruction of functional connectomes unravels discriminative brain sub-systems in health and disease. \textit{Scientific Reports} (in press).
+
+\item Poetto, S., Merritt, H., Santoro, A., Rabuffo, G., Finc, K., Battaglia, D., \ldots{} \& Petri, G. (2025). The topological architecture of brain identity. \textit{bioRxiv}, 2025-06.
+
+\item Gut, M., Bonna, K., Finc, K., Wypych, A., Ma\'nkowska, K., \& S{\l}upczewski, J. (2025). Transfer of the effects of computer-based cognitive training in non-numerical--spatial association to numerical--spatial association in children at risk of dyscalculia. \textit{International Journal of Psychophysiology}, 213, 113037.
+
+\item Adamska, I., \& Finc, K. (2023). Effect of LSD and music on the time-varying brain dynamics. \textit{Psychopharmacology}, 240(7), 1601--1614.
+
+\item Niso, G., Botvinik-Nezer, R., Appelhoff, S., De La Vega, A., Esteban, O., Etzel, J.\,A., Finc, K., \ldots{} \& Rieger, J. (2022). Open and reproducible neuroimaging: from study inception to publication. \textit{NeuroImage}, 263.
+
+\item Levitis, E., van Praag, C.\,G., Gau, R., Heunis, S., DuPre, E., Kiar, G., \ldots{} Finc, K., \ldots{} \& Maumet, C. (2021). Centering inclusivity in the design of online conferences. \textit{GigaScience} 10(8).
+
+\item Gut, M., Binder, M., Finc, K., Szeszkowski, W. (2021). Brain activity underlying response induced by SNARC-congruent and SNARC-incongruent stimuli. \textit{Acta Neurobiologiae Experimentalis} (accepted).
+
+\item Finc, K., Bonna, K., He, X., Lydon-Staley, D.\,M., K\"uhn, S., Duch, W., \& Bassett, D.\,S. (2020). Dynamic reconfiguration of functional brain networks during working memory training. \textit{Nature Communications} 11, 2435.
+
+\item Esteban, O., Ciric, R., Finc, K., Blair, R.\,W., Markiewicz, C.\,J., Moodie, C.\,A., \ldots{} \& Gorgolewski, K.\,J. (2020). Analysis of task-based functional MRI data preprocessed with fMRIPrep. \textit{Nature Protocols}, 15(7), 2186--2202.
+
+\item Dreszer, J., Grochowski, M., Lewandowska, M., Nikadon, J., Gorgol, J., Ba{\l}aj, B., Finc, K., \ldots{} \& Piotrowski, T. (2020). Spatiotemporal complexity patterns of resting-state bioelectrical activity explain fluid intelligence: Sex matters. \textit{Human Brain Mapping}.
+
+\item Bielczyk, N.\,Z., Ando, A., Badhwar, A., \ldots{} Finc, K., \ldots{} OHBM Student and Postdoc Special Interest Group. (2020). Effective self-management for early career researchers in the natural and life sciences. \textit{Neuron} 106(2), 212--217.
+
+\item Asanowicz, D., Gociewicz, K., Koculak, M., Finc, K., Bonna, K., Cleeremans, A., \& Binder, M. (2020). The response relevance of visual stimuli modulates the P3 component and the underlying sensorimotor network. \textit{Scientific Reports}, 10(1), 1--20.
+
+\item Thompson, W.\,H., Kastrati, G., Finc, K., Wright, J., Shine, J.\,M., \& Poldrack, R.\,A. (2020). Time-varying nodal measures with temporal community structure: A cautionary note to avoid misinterpretation. \textit{Human Brain Mapping}, 41(9), 2347--2356.
+
+\item Bonna, K.$^*$, Finc, K.$^*$, Zimmermann, M., Bola, {\L}., Mostowski, P., Szul, M., Rutkowski, P., Duch, W., Marchewka, A., Jednoróg, K., Szwed, M. (2019). Early deafness leads to re-shaping of global functional connectivity beyond the auditory cortex. \textit{Brain Imaging and Behaviour} 15(3), 1469--1482. $^*$equal contribution.
+
+\item Naumczyk, P., Sawicka, A.\,K., Brzeska, B., Sabisz, A., Jodzio, K., Radkowski, M., Czachowska, K., Winklewski, P.\,J., Finc, K., et al. (2018). Cognitive Predictors of Cortical Thickness in Healthy Aging. In: \textit{Advances in Experimental Medicine and Biology}. Springer, New York.
+
+\item Burzynska, A.\,Z., Finc, K., Taylor, B.\,K., Knecht, A., Kramer, A.\,F. (2017). The dancing brain: Structural and functional signatures of professional dance training. \textit{Frontiers in Human Neuroscience} 11, 566.
+
+\item Binder, M., Gociewicz, K., Windey, B., Koculak, M., Finc, K., Nikadon, J., Derda, M., Cleeremans, A. (2017). The levels of perceptual processing and the neural correlates of increasing subjective visibility. \textit{Consciousness and Cognition} 55, 106--125.
+
+\item Finc, K., Bonna, K., Lewandowska, M., Wolak, T., Nikadon, J., Dreszer, J., Duch, W., K\"uhn, S. (2017). Transition of the functional brain network related to increasing cognitive demands. \textit{Human Brain Mapping} 38(7), 3659--3674.
+
+\end{cvlist}
+
+\subsection*{\normalsize Chapters in books}
+
+\begin{cvlist}
+
+\item Finc, K. (2023). Network Neuroscience Methods for Investigating Brain Plasticity. In: \textit{The Oxford Handbook of Cognitive Enhancement and Brain Plasticity}.
+
+\end{cvlist}
+
+%% ── Open-source software ─────────────────────────────────────────────────────
+\cvsection{Contribution to Open-Source Software}
+
+\cventry{fMRIDenoise}{Automated denoising and quality control of functional connectivity data. \href{https://github.com/compneuro-ncu/fmridenoise}{github.com/compneuro-ncu/fmridenoise} — developer.}
+
+\cventry{fMRIPrep}{A robust preprocessing pipeline for fMRI data. \href{https://github.com/poldracklab/fmriprep}{github.com/poldracklab/fmriprep} — contributor.}
+
+\cventry{FitLins}{Fitting linear models to BIDS datasets. \href{https://github.com/poldracklab/fitlins}{github.com/poldracklab/fitlins} — contributor.}
+
+\cventry{Nilearn}{Machine learning for neuroimaging in Python. \href{https://github.com/nilearn/nilearn}{github.com/nilearn/nilearn} — contributor.}
+
+%% ── Projects & Grants ────────────────────────────────────────────────────────
+\cvsection{Projects \& Grants}
+
+\cventry{2026 -- present}{Researcher, \textit{EUROpest: A Novel Understanding of Pandemic Disease in Preindustrial Europe (1300--1800)}, ERC Synergy Grant. PI: Adam Izdebski.}
+
+\cventry{2024 -- 2025}{Principal Investigator, \textit{Exploring the Dynamic Interplay of Brain-Body Network: Advancing Research through Modern Equipment Acquisition}, Excellence Initiative Research University. Budget: 360\,000 PLN.}
+
+\cventry{2024 -- 2025}{Principal Investigator, \textit{Innovative Polyrhythmic Training in Virtual Reality}, Academy of Innovation Leaders. Budget: 30\,000 PLN.}
+
+\cventry{2023 -- 2024}{Co-Principal Investigator, \textit{e-ReproNim: A shared approach to teaching open and reproducible neuroimaging}, Network of European Neuroscience Schools.}
+
+\cventry{2020 -- 2021}{Principal Investigator, \textit{Modern equipment for audio-visual stimulation and collecting behavioral responses dedicated to fMRI}, Excellence Initiative -- Research University, Ministry of Science and Higher Education. Budget: 500\,000 PLN.}
+
+\cventry{2019 -- 2020}{Principal Investigator, \textit{Gamified neurocognitive tests adjusted to fMRI} (KUBUS 2.0), Ministry of Science and Higher Education.}
+
+\cventry{2019 -- 2020}{Researcher, \textit{Neuronal correlates of reinforcement learning. The role of individual differences in learning strategies} (DSM grant), Faculty of Physics, Astronomy and Informatics NCU. PI: Kamil Bonna.}
+
+\cventry{2018 -- 2022}{Principal Investigator, \textit{Dynamics and plasticity of the human connectome related to higher cognitive functions}, computational grant, Wroclaw Centre for Networking and Supercomputing.}
+
+\cventry{2018 -- 2022}{Co-Investigator, \textit{The comprehensive study on the brain basis of low numeracy skills and the behavioral and neuroplastic changes evoked by training of spatial-numerical association} (SONATA BIS, NCN 2017/26/E/HS6/00033). PI: Ma{\l}gorzata Gut.}
+
+\cventry{2016 -- 2018}{Principal Investigator, \textit{Temporal dynamics of functional connectivity changes induced by cognitive training. The role of individual differences} (PRELUDIUM 9, NCN 2015/17/N/HS6/03549). Supervisor: Simone K\"uhn. Budget: 149\,642 PLN.}
+
+\cventry{2014 -- 2016}{Researcher, \textit{Dynamic neural correlates of consciousness as a function of the level of processing} (HARMONIA 4, NCN 2013/08/M/HS6/00004). PI: Marek Binder.}
+
+\cventry{2014 -- 2016}{Researcher, \textit{Brain correlates of normal cognitive ageing} (PRELUDIUM 5, NCN 2013/091N/HS6/O2634). PI: Patrycja Naumczyk.}
+
+%% ── Scholarships & Awards ────────────────────────────────────────────────────
+\cvsection{Scholarships \& Awards}
+
+\cventry{2022}{Nominated for the TOP 100 Women in AI in Poland list, Perspectives Foundation.}
+
+\cventry{2021}{Jerzy Konorski Distinction for the Best Scientific Publication in Neurobiology, for \textit{Dynamic reconfiguration of functional brain networks during working memory training} (\textit{Nature Communications}, 2020).}
+
+\cventry{2021}{Scholarship of the Minister of Education and Science for outstanding young scientists.}
+
+\cventry{2021}{Bekker Scholarship, Polish National Agency for Academic Exchange (NAWA), for postdoctoral internship at Max Planck Institute for Human Development, Berlin.}
+
+\cventry{2020, 2023}{Lindau Fellowship (Lindau Nobel Laureate Meeting participation).}
+
+\cventry{2020}{ReproNim/INCF 2020--2021 Training Fellowship, Center for Reproducible Neuroimaging Computation and INCF.}
+
+\cventry{2018}{START travel grant for 1-month study visit in the Poldrack Lab at Stanford University (16\,000 PLN).}
+
+\cventry{2018}{START Scholarship for outstanding young scholars, additionally increased by the prof. Barbara Skarga scholarship for interdisciplinary research, Foundation for Polish Science (36\,000 PLN).}
+
+\cventry{2017}{ETIUDA scholarship for PhD candidates (88\,838 PLN), National Science Centre (2017/24/T/HS6/00105).}
+
+\cventry{2017}{I Prize (Best Oral Presentation Award), \textit{Dynamics and plasticity of functional networks in the human brain}, Neuromania, Toru\'n.}
+
+\cventry{2014}{Erasmus+ Scholarship, internship at Max Planck Institute for Human Development, Center for Lifespan Psychology, Berlin.}
+
+\cventry{2014}{Award for the Best Master Thesis, Faculty of Humanities, Nicolaus Copernicus University.}
+
+\cventry{2014}{Award for the Best Graduate, Faculty of Humanities, Nicolaus Copernicus University.}
+
+\cventry{2014}{Laureate of the regional ``Student Nobel'' contest.}
+
+\cventry{2014}{Entry in the Golden Book of the Best Students, Faculty of Humanities, Nicolaus Copernicus University.}
+
+\cventry{2013--2014}{Scholarship of the Minister of Science and Higher Education for outstanding academic performance.}
+
+\cventry{2013}{I Prize (Best Poster Award), \textit{Brain in the mourning: neurobiological correlates of resilience}, VIII International Scientific-Educational Conference, Medical University of Bia{\l}ystok.}
+
+\cventry{2011--2014}{Rector Scholarship for the best students, Nicolaus Copernicus University.}
+
+\cventry{2010--2011}{Scholarship for high academic performance, Nicolaus Copernicus University.}
+
+%% ── Conference Presentations ─────────────────────────────────────────────────
+\cvsection{Conference Presentations}
+
+\begin{cvlist}
+
+\item Finc, K. (2021). Dynamics and Plasticity of the Human Brain Network During Cognition. Lindau Nobel Laureate Meeting, Next Generation Science Session. \textit{Talk}.
+
+\item Finc, K. (2021). Understanding the brain's ecosystem. Neurohackator, Toru\'n. \textit{Invited talk}.
+
+\item Finc, K. (2020). Open and Reproducible Neuroimaging, University of Oldenburg. Introduction to fMRI data analysis in Nilearn. \textit{Invited talk}.
+
+\item Finc, K., Bonna, K., Chojnowski, M. (2019). fMRIDenoise: tool for automatic denoising and quality control of functional connectivity data. INCF Neuroinformatics, Warsaw. \textit{Demo \& poster}.
+
+\item Finc, K., Bonna, K. (2019). fMRIDenoise: automated denoising strategies comparison and quality control of functional connectivity data. Annual Meeting of the Organization for Human Brain Mapping, Open Science Room, Rome. \textit{Talk}.
+
+\item Finc, K., Bonna, K., He, X., Lydon-Staley, D.\,M., K\"uhn, S., Duch, W., \& Bassett, D.\,S. (2019). Dynamic functional network reconfiguration during 6-week working memory task training. OHBM Annual Meeting, Rome. \textit{Poster}.
+
+\item Finc, K., Bonna, K., Kosik, K., Duch, W., K\"uhn, S. (2018). Dynamics and plasticity of functional brain networks. University of Washington eScience Institute, Seattle. \textit{Poster}.
+
+\item Finc, K., Bonna, K., Kosik, M., Duch, W., K\"uhn, S. (2018). Ongoing dynamics of functional brain network changes during 6-week working memory training. OHBM Annual Meeting, Singapore. \textit{Poster}.
+
+\item Finc, K., Kosik, M., Bonna, K., Duch, W., K\"uhn, S. (2018). Task-based Functional Network Changes Following 6-week Working Memory Training. NEURONUS 2018 IBRO\&IRUN Neuroscience Forum, Krak\'ow. \textit{Poster}.
+
+\item Bonna, K., Finc, K., Bo{\l}a, {\L}., Zimmermann, M., Mostowski, P., et al. (2018). Various aspects of compensatory plasticity during resting-state in early deaf adults. NEURONUS 2018, Krak\'ow. \textit{Poster}.
+
+\item Finc, K., Bonna, K., et al. (2017). Temporal dynamics of functional network changes following 6-week working memory training: preliminary results. Aspects of Neuroscience, Warsaw. \textit{Poster}.
+
+\item Finc, K., Bonna, K., Lewandowska, M., Wolak, T., Nikadon, J., Dreszer, J., Duch, W., K\"uhn, S. (2017). Default Mode Network Role in Global Workspace Formation During Increasing Cognitive Demands. Keystone Symposia: Connectomics, Santa Fe. \textit{Talk \& poster}.
+
+\item Bonna, K., Finc, K., Duch, W. (2017). Discovering generative model of human connectome by symbolic regression. Keystone Symposia: Connectomics, Santa Fe. \textit{Poster}.
+
+\item Bonna, K., Finc, K., et al. (2016). The relationship between whole-brain modularity of the functional network and behavioral performance during a working memory task. OHBM Annual Meeting, Geneva. \textit{Poster}.
+
+\item Finc, K., Bonna, K. (2016). Functional network reconfiguration related to increasing cognitive effort. NEURONUS 2016 IBRO\&IRUN Neuroscience Forum, Krak\'ow. \textit{Talk}.
+
+\item Finc, K., Bonna, K., et al. (2015). Frontoparietal and default mode network functional connectivity changes during increased load of working memory task. Aspects of Neuroscience, Warsaw. \textit{Poster}.
+
+\item Bonna, K., Finc, K., et al. (2015). Global modularity changes during increased load of working memory task. Aspects of Neuroscience, Warsaw. \textit{Poster}.
+
+\item Finc, K., Nikadon, J., et al. (2015). Resting state functional connectivity predicts BOLD activity during working memory task. NEURONUS 2015, Krak\'ow. \textit{Poster}.
+
+\item Finc, K., Szymaszek, A., Dreszer-Drogor\'ob, J. (2014). Does improvement in temporal information processing underlie cognitive benefits after action video game training? FENS Forum of Neuroscience, Milan. \textit{Poster}.
+
+\item Finc, K. (2013). The stability-plasticity dilemma in sleep and memory context. Philosophy of Neuroscience, Rostock. \textit{Talk}.
+
+\item Finc, K., Goraczewski, {\L}., W\'ojcik, A. (2013). Games for brains: a new way of maximizing motivation in education. California Cognitive Science Conference, Berkeley. \textit{Poster}.
+
+\item Finc, K. (2013). Brain in the mourning: neurobiological correlates of resilience. VIII International Scientific-Educational Conference, Bia{\l}ystok. \textit{Poster}.
+
+\end{cvlist}
+
+%% ── Teaching ─────────────────────────────────────────────────────────────────
+\cvsection{Teaching Experience}
+
+\cventry{2023, 2025}{Designing Responsible Research for Cognitive Science, laboratory (30h), Nicolaus Copernicus University.}
+
+\cventry{2022 -- present}{Network Neuroscience, laboratory (30h), Nicolaus Copernicus University.}
+
+\cventry{2021 -- 2022}{Running a reproducible research project, laboratory (30h), Nicolaus Copernicus University.}
+
+\cventry{2021 -- 2022}{Neuroscience of perception and attention, lectures (30h), Nicolaus Copernicus University.}
+
+\cventry{2019 -- 2022}{Fundamentals of fMRI data analysis, laboratory (30h), Cognitive Science (all years), Nicolaus Copernicus University.}
+
+\cventry{2019/2020}{Neurobiology, lectures (30h), Cognitive Science (2nd year), Nicolaus Copernicus University.}
+
+\cventry{2015/2016}{Neuropsychology, laboratory (30h), Cognitive Science (1st year), Nicolaus Copernicus University.}
+
+\cventry{2014/2015}{EEG workshops, laboratory (30h), Cognitive Science (2nd year), Nicolaus Copernicus University.}
+
+%% ── Additional Training ───────────────────────────────────────────────────────
+\cvsection{Additional Training}
+
+\cventry{2020}{Neuromatch Academy (interactive track).}
+\cventry{2020}{Eastern European Machine Learning Summer School: Deep Learning and Reinforcement Learning.}
+\cventry{2020}{Certified GitHub Campus Advisor.}
+\cventry{2020}{Crash Course on Python (Google).}
+\cventry{2019}{The Virtual Brain Workshop (INCF Neuroinformatics, Warsaw).}
+\cventry{2018}{Neurohackademy Summer School, University of Washington eScience Institute.}
+\cventry{2018}{Data Scientist with Python, DataCamp (84h career track, 22 courses).}
+\cventry{2018}{Data Scientist with R, DataCamp (95h career track, 23 courses).}
+\cventry{2016}{Exploring the Human Connectome, Dutch Connectome Lab, Utrecht Summer School.}
+\cventry{2015}{Second Brain Connectivity Course, Neurometrika, Grenoble Institute of Neuroscience.}
+\cventry{2015}{Research team management, scientific communication, and commercialization of research results (Foundation for Polish Science, SKILLS project).}
+\cventry{2014}{MRI safety training (Max Planck Institute for Human Development).}
+\cventry{2014}{Data Management for Clinical Research (Vanderbilt University, Coursera).}
+\cventry{2014}{R Programming (Johns Hopkins University, Coursera).}
+\cventry{2014}{fMRI data analysis in SPM (SWPS, Warsaw).}
+\cventry{2014}{Statistical Analysis of fMRI Data (Johns Hopkins University, Coursera).}
+\cventry{2013}{Simultaneous EEG and fMRI workshop (Brain Products GmbH, ICNT, Toru\'n).}
+\cventry{2013}{Simultaneous EEG and TMS workshop (Brain Products GmbH \& MAG \& More GmbH, Toru\'n).}
+\cventry{2013}{Statistics in Medicine (Stanford University, Stanford Online).}
+\cventry{2013}{Data Analysis (Johns Hopkins University, Coursera).}
+
+%% ── Other Scientific Activities ──────────────────────────────────────────────
+\cvsection{Other Scientific Activities}
+
+\cventry{2019}{Brainhack Toru\'n organizer.}
+\cventry{2019}{Brainhack Warsaw organizer.}
+\cventry{2016 -- present}{Supervisor, Neurotechnology Scientific Students Club, Nicolaus Copernicus University.}
+\cventry{2016}{fMRI workshop for University of Children, Nicolaus Copernicus University in Toru\'n.}
+\cventry{2015}{Workshops ``Memory Labyrinth'', Nencki Institute of Experimental Biology, Polish Academy of Science, Warsaw.}
+\cventry{2014, 2013}{Co-organizer, NeuroMania Conference, Nicolaus Copernicus University in Toru\'n.}
+\cventry{2010/2011}{President, Students' Cognitive Science Circle, Nicolaus Copernicus University.}
+
+%% ── Membership ───────────────────────────────────────────────────────────────
+\cvsection{Membership}
+
+\cventry{2026 -- present}{Network Science Society (NetSci).}
+\cventry{2019 -- present}{Neuroinformatics Coordinating Facility (INCF).}
+\cventry{2016, 2018, 2019}{Organization for Human Brain Mapping (OHBM).}
+
+%% ── Reviewing ────────────────────────────────────────────────────────────────
+\cvsection{Reviewing Activities}
+
+\textcolor{accent}{\small\itshape Ad-hoc reviewer}\quad
+Nature Methods, NeuroImage, Cerebral Cortex, Current Biology, Frontiers in Neuroscience, Brain Imaging and Behavior, Psychophysiology, Neuroscience, Musicae Scientae, Neural Plasticity.
+
+%% ── Technical Skills ─────────────────────────────────────────────────────────
+\cvsection{Technical Skills}
+
+\begin{tabular*}{\linewidth}{@{}p{3.5cm}@{\hspace{0.5em}}p{\dimexpr\linewidth-4.0cm}@{}}
+  \textit{Programming \& Tools} & Python, R, MATLAB, SQL, Bash, Git/GitHub, \LaTeX, Linux; software development \\[0.3em]
+  \textit{Data Analysis}        & Graph theory, Representational Similarity Analysis (RSA), Machine Learning, GLM \\[0.3em]
+  \textit{Neuroimaging}         & fMRI, EEG, and simultaneous fMRI--EEG data acquisition and analysis \\[0.3em]
+  \textit{Communication}        & Scientific writing, academic presentations, data visualization \\
+\end{tabular*}
+
+\end{document}
